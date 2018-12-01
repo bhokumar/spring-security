@@ -13,7 +13,10 @@ public class ResourceController {
 	@GetMapping(value="/tolldata")
 	public List<TollUsage> getTollUsageList(){
 		List<TollUsage> tollUsages = new ArrayList<>();
-		tollUsages.add(new TollUsage("1", "stationId1", "licenseplate1", "timestamp1"));
+		tollUsages.add(new TollUsage("101", "stationId1", "licenseplate1", "2018-09-30T06:38:50"));
+		tollUsages.add(new TollUsage("102", "stationId2", "licenseplate2", "2018-09-30T06:38:51"));
+		tollUsages.add(new TollUsage("103", "stationId3", "licenseplate3", "2018-09-30T06:38:52"));
+		tollUsages.add(new TollUsage("104", "stationId4", "licenseplate4", "2018-09-30T06:38:53"));
 		return tollUsages;
 	}
 }

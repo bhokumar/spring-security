@@ -10,6 +10,22 @@
 			<div class="col-md-2"></div>
 			<div class="col-md-8">
 				<h1>Spring security Reports Page</h1>
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>Station Id</th>
+							<th>Plate</th>
+							<th>TimeStamp</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="toll : ${tolls}">
+							<td th:text="${toll.stationId}"></td>
+							<td th:text="${toll.licensePlate}"></td>
+							<td th:text="${toll.timestamp}"></td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
 			<div class="col-md-2"></div>
 		</div>
