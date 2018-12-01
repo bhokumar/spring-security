@@ -1,0 +1,25 @@
+server:
+  servlet:
+    context-path: /services
+  port: 9000
+#spring:
+#  security:
+#    user:
+#      name: bhoopendra
+#      password: Password
+#      roles:
+#      - USER
+security:
+  oauth2:
+    client:
+      client-id: client1
+      client-secret: Secret123
+      authorized-grant-types:
+      - authorization_code
+      - refresh_token
+      - password
+      - client_credentials
+      scope:
+      - toll_read
+      - toll_report 
+    
