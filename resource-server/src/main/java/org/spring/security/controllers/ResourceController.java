@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.spring.security.domain.TollUsage;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class ResourceController {
 	
 	@GetMapping(value="/tolldata")
+	@PreAuthorize("#oauth2.hasScope('toll_read') and hasAuthority('ROLE_OPERATOR')")
 	public List<TollUsage> getTollUsageList(){
 		List<TollUsage> tollUsages = new ArrayList<>();
 		tollUsages.add(new TollUsage("101", "stationId1", "licenseplate1", "2018-09-30T06:38:50"));

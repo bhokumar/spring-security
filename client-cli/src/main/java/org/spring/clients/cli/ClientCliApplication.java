@@ -25,8 +25,8 @@ public class ClientCliApplication implements CommandLineRunner{
 		resourceDetails.setScope(Arrays.asList("toll_read"));
 		resourceDetails.setClientId("client1");
 		resourceDetails.setClientSecret("Secret123");
-		resourceDetails.setUsername("Raj");
-		resourceDetails.setPassword("pass1");
+		resourceDetails.setUsername("Bijendra");
+		resourceDetails.setPassword("pass2");
 		
 		OAuth2RestTemplate restTemplate = new OAuth2RestTemplate(resourceDetails);
 		String token = restTemplate.getAccessToken().toString();
