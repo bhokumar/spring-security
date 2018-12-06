@@ -1,25 +1,22 @@
 server:
+  port: 9000
   servlet:
     context-path: /services
-  port: 9000
-#spring:
-#  security:
-#    user:
-#      name: bhoopendra
-#      password: Password
-#      roles:
-#      - USER
-security:
-  oauth2:
-    client:
-      client-id: client1
-      client-secret: Secret123
-      authorized-grant-types:
-      - authorization_code
-      - refresh_token
-      - password
-      - client_credentials
-      scope:
-      - toll_read
-      - toll_report 
-    
+jdbc:
+  driver:
+    class:
+      name: com.mysql.cj.jdbc.Driver
+  url: jdbc:mysql://localhost:3306/school
+  user: root
+  password: Admin123
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/school?verifyServerCertificate=false&useSSL=false&requireSSL=false
+    data-username: root
+    data-password: Admin123
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQL5Dialect
