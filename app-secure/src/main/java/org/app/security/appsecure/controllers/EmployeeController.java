@@ -11,7 +11,7 @@ import java.util.List;
 @RestController
 public class EmployeeController {
 
-    @GetMapping("/")
+    @GetMapping("/users")
     @PreAuthorize("hasAuthority('USER')")
     public List<Employee> getEmployees() {
         List<Employee> employees = Arrays.asList(new Employee("User3", 101), new Employee("User4", 102));
